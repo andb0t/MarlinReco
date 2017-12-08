@@ -298,18 +298,18 @@ void IsolatedLeptonFinderProcessorNew::processEvent( LCEvent * evt ) {
 	_pfoCol = evt->getCollection( _inputPFOsCollection ) ;
 
 	// Output PFOs removed isolated leptons
-	auto* otPFOsRemovedIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE );
+	auto* otPFOsRemovedIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE ));
 	otPFOsRemovedIsoLepCol->setSubset(true) ;
 
 	// Output PFOs of isolated leptons
-	auto* otIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE );
+	auto* otIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE ));
 	otIsoLepCol->setSubset(true);
 
 	// Output PFOs removed dressed isolated leptons
-	auto* otPFOsRemovedDressedIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE );
+	auto* otPFOsRemovedDressedIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE ));
 
 	// Output PFOs of dressed isolated leptons
-	auto* otDressedIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE );
+	auto* otDressedIsoLepCol = std::unique_ptr<LCCollectionVec>(new LCCollectionVec( LCIO::RECONSTRUCTEDPARTICLE ));
 
 	// Prepare jet/recoparticle map for jet-based isolation
 	if (_useJetIsolation) {
