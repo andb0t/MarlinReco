@@ -129,6 +129,7 @@ ADD_MARLINRECO_PKG( ./Analysis/GammaGammaSolutionFinder )
 ADD_MARLINRECO_PKG( ./Analysis/DistilledPFOCreator )
 ADD_MARLINRECO_PKG( ./Analysis/IsolatedLeptonTagging )
 ADD_MARLINRECO_PKG( ./Analysis/IsolatedLeptonFinder )
+ADD_MARLINRECO_PKG( ./Analysis/IsolatedLeptonFinderNew )
 ADD_MARLINRECO_PKG( ./Analysis/PIDTools )
 ADD_MARLINRECO_PKG( ./Analysis/RecoMCTruthLink )
 ADD_MARLINRECO_PKG( ./Analysis/TauFinder )
@@ -210,6 +211,6 @@ DISPLAY_STD_VARIABLES()
 # Set the source files to clang-format (FIXME: determine this better)
 FILE(GLOB_RECURSE
      CHECK_CXX_SOURCE_FILES
-        Analysis/IsolatedLeptonFinder/src/*.cc Analysis/IsolatedLeptonFinder/include/*.h
+        Analysis/IsolatedLeptonFinderNew/src/*.cc Analysis/IsolatedLeptonFinderNew/include/*.h
      )
 INCLUDE("cmake/clang-cpp-checks.cmake")

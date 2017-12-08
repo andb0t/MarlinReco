@@ -8,8 +8,8 @@
  * based on the track cone energy, lepton identification,
  * and the track impact parameters (optional).
  */
-#ifndef IsolatedLeptonFinderProcessor_h
-#define IsolatedLeptonFinderProcessor_h 1
+#ifndef IsolatedLeptonFinderProcessorNew_h
+#define IsolatedLeptonFinderProcessorNew_h 1
 
 #include <algorithm>
 #include <string>
@@ -26,15 +26,15 @@
 using namespace lcio ;
 using namespace marlin ;
 
-class IsolatedLeptonFinderProcessor : public Processor {
+class IsolatedLeptonFinderProcessorNew : public Processor {
 
 	public:
 
-		virtual Processor*  newProcessor() { return new IsolatedLeptonFinderProcessor ; }
+		virtual Processor*  newProcessor() { return new IsolatedLeptonFinderProcessorNew ; }
 
-		IsolatedLeptonFinderProcessor() ;
-		IsolatedLeptonFinderProcessor(const IsolatedLeptonFinderProcessor &);
-		IsolatedLeptonFinderProcessor & operator = (const IsolatedLeptonFinderProcessor &);
+		IsolatedLeptonFinderProcessorNew() ;
+		IsolatedLeptonFinderProcessorNew(const IsolatedLeptonFinderProcessorNew &);
+		IsolatedLeptonFinderProcessorNew & operator = (const IsolatedLeptonFinderProcessorNew &);
 
 		virtual void init() ;
 		virtual void processEvent( LCEvent * evt ) ;
@@ -175,4 +175,3 @@ class IsolatedLeptonFinderProcessor : public Processor {
 } ;
 
 #endif
-
